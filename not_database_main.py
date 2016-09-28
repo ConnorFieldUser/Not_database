@@ -2,12 +2,12 @@ import csv
 
 with open('databaselol.csv') as database:
     format_data = list(csv.DictReader(database, fieldnames=["username", "password", "fullname", "extra"]))
-    for row in format_data:
-        print(row)
+    # for row in format_data:
+    #     print(row)
 # database.closed
 
 
-print(format_data)
+# print(format_data)
 
 
 def seperate():
@@ -49,8 +49,8 @@ def login():
 
     with open('databaselol.csv') as database:
         format_data = list(csv.DictReader(database, fieldnames=["username", "password", "fullname", "extra"]))
-        for row in format_data:
-            print(row)
+        # for row in format_data:
+        #     print(row)
 
     print(".....Login.....")
     username = input("Input username: ")
