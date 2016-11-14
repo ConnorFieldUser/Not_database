@@ -4,7 +4,7 @@ with open('databaselol.csv') as database:
     format_data = list(csv.DictReader(database, fieldnames=["username", "password", "fullname", "extra"]))
 
 
-def seperate():
+def separate():
     print("................")
 
 
@@ -30,7 +30,7 @@ def real_database(line):
     print("Welcome: {}".format(line["fullname"]))
     print(line["extra"])
     # print("Welcome: {}".format("hi"))
-    action = input("(A)dd new user? Or (L)ogout?>>>").lower()
+    action = input("(A)dd new user? (L)ogout? Change (I)nformation?>>>").lower()
     if action == 'a':
         print('add')
         init_user()
@@ -46,9 +46,9 @@ def login():
 
     print(".....Login.....")
     username = input("Input username: ")
-    seperate()
+    separate()
     password = input("Input password: ")
-    seperate()
+    separate()
 
     for line in format_data:
         if username == line['username'] and password == line['password']:
