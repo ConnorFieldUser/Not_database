@@ -1,2 +1,3 @@
 # Not_database
-Python practice for methods and passing variables.
+
+Created in week three at The Iron Yard as python practice for methods and passing variables.
