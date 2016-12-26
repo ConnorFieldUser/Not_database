@@ -1,6 +1,6 @@
 import csv
 
-with open('databaselol.csv') as database:
+with open('database.csv') as database:
     format_data = list(csv.DictReader(database, fieldnames=["username", "password", "fullname", "extra"]))
 
 
@@ -19,7 +19,7 @@ def init_user():
             login()
 
         else:
-            f = open('databaselol.csv', 'a')
+            f = open('database.csv', 'a')
 
             f.write("{},{},{},{}\n".format(new_user, new_password, new_fullname, new_extra_data))
             f.close()
@@ -41,7 +41,7 @@ def real_database(line):
 
 def login():
 
-    with open('databaselol.csv') as database:
+    with open('database.csv') as database:
         format_data = list(csv.DictReader(database, fieldnames=["username", "password", "fullname", "extra"]))
 
     print(".....Login.....")
